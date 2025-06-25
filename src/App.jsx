@@ -1,11 +1,10 @@
-import { StackProvider } from "./Context/StackContext";
 import Home from "./Pages/Home";
 import Stack from "./Pages/Stackpage";
-import NextButton from "./Pages/NextButton";
+import QueuePage from "./Pages/QueuePage";
+import NextButton from "./assets/NextButton";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 
 // Placeholder components for other data structures
-const Queue = () => <div className="container mt-5"><h2>Queue Implementation</h2><p>Coming Soon...</p></div>;
 const LinkedList = () => <div className="container mt-5"><h2>Linked List Implementation</h2><p>Coming Soon...</p></div>;
 const BinaryTree = () => <div className="container mt-5"><h2>Binary Tree Implementation</h2><p>Coming Soon...</p></div>;
 const Graph = () => <div className="container mt-5"><h2>Graph Implementation</h2><p>Coming Soon...</p></div>;
@@ -84,13 +83,14 @@ style={{ width: '35px', height: '35px', cursor: 'pointer' }}
 );
 
 export default function App(){
+    
 return (
 <BrowserRouter>
 <Navbar />
 <Routes>
 <Route path='/' element={<Home/>} />
-<Route path='/stack' element={<StackProvider><Stack /></StackProvider>} />
-<Route path='/queue' element={<Queue />} />
+<Route path='/stack' element={<Stack/>} />
+<Route path='/queue' element={<QueuePage />} />
 <Route path='/linkedlist' element={<LinkedList />} />
 <Route path='/binarytree' element={<BinaryTree />} />
 <Route path='/graph' element={<Graph />} />

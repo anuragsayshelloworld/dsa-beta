@@ -1,9 +1,6 @@
-import { useContext } from 'react';
 import { PandaSVG, DinosaurSVG, MammothSVG} from '../assets/SVG';
-import StackContext from '../Context/StackContext';
 
-export default function LayoutI({ LeftInfoBox, RightPanel }) {
-const {setInStack} = useContext(StackContext);    
+export default function LayoutI({ LeftInfoBox, RightPanel, setInStack }) {  
 return (
 <div className="container py-1">
 <div className="row justify-content-center">

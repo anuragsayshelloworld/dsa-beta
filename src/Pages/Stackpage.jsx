@@ -83,5 +83,11 @@ aria-label="Stack elements">
 </div>))}
 </div>
 </div>);
-return <LayoutI LeftInfoBox={leftInfoBox} RightPanel={rightPanel} />;
+return <LayoutI LeftInfoBox={leftInfoBox} RightPanel={rightPanel} setInStack={setInStack} />;
 }
+//Rename setInStack to be a more neutral name for all other pages
+//make it into smaller chunks 
+// also, since we have made the context wrap around whole app just rename it suit gloabal context name
+// redo the order of DSA.. array should come before trees and all that
+// okay thats all for tommorow.. wait rule: context lai individual page mai aacess garne instead of making it as a prop and sending  
+// Queue and array tommorow
