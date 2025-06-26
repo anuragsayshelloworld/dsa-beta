@@ -1,14 +1,14 @@
 import Home from "./Pages/Home";
 import Stack from "./Pages/Stackpage";
 import QueuePage from "./Pages/QueuePage";
+import LinkedList from "./Pages/LinkedList";
+import BinaryTree from "./Pages/BinaryTree"
 import NextButton from "./assets/NextButton";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
 import StackContext from "./Context/StackContext";
 import { useContext } from "react";
 
 // Placeholder components for other data structures
-const LinkedList = () => <div className="container mt-5"><h2>Linked List Implementation</h2><p>Coming Soon...</p></div>;
-const BinaryTree = () => <div className="container mt-5"><h2>Binary Tree Implementation</h2><p>Coming Soon...</p></div>;
 const Graph = () => <div className="container mt-5"><h2>Graph Implementation</h2><p>Coming Soon...</p></div>;
 const HashTable = () => <div className="container mt-5"><h2>Hash Table Implementation</h2><p>Coming Soon...</p></div>;
 const Heap = () => <div className="container mt-5"><h2>Heap Implementation</h2><p>Coming Soon...</p></div>;
