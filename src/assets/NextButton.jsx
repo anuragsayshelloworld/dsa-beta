@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 
-export default function NextButton() {
+export default function NextButton({setInStack}) {
 const location = useLocation();
 const navigate = useNavigate();
 
@@ -26,6 +26,7 @@ const nextRoute = routeOrder[currentIndex + 1];
 
 const handleNext = () => {
 if (nextRoute) {
+setInStack([]);    
 navigate(nextRoute);
 }
 };

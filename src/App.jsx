@@ -3,6 +3,8 @@ import Stack from "./Pages/Stackpage";
 import QueuePage from "./Pages/QueuePage";
 import NextButton from "./assets/NextButton";
 import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
+import StackContext from "./Context/StackContext";
+import { useContext } from "react";
 
 // Placeholder components for other data structures
 const LinkedList = () => <div className="container mt-5"><h2>Linked List Implementation</h2><p>Coming Soon...</p></div>;
@@ -83,7 +85,7 @@ style={{ width: '35px', height: '35px', cursor: 'pointer' }}
 );
 
 export default function App(){
-    
+ const {setInStack} = useContext(StackContext);   
 return (
 <BrowserRouter>
 <Navbar />
@@ -101,7 +103,7 @@ return (
 <Route path='/set' element={<Set />} />
 <Route path='/map' element={<Map />} />
 </Routes>
-<NextButton/>
+<NextButton setInStack={setInStack}/>
 </BrowserRouter>
 );
 }
